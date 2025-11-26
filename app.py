@@ -52,6 +52,24 @@ st.success("Model loaded successfully!")
 # -----------------------------------------
 
 uploaded = st.file_uploader("Upload a CSV file of tweets", type=["csv"])
+st.write("### 📄 Required CSV Format")
+
+st.info("""
+Your CSV file **must contain** the following columns:
+
+- **`text`** — *(required)*  
+  Used for hate-speech prediction.
+
+Optional columns for visualizations:
+
+- **`date`** — *(optional but required for time-series trend)*  
+  Must be parseable to a valid date.
+
+- **`user_location`** — *(optional but required for county heatmap)*  
+  Free-text is okay; the system will try to map it to Kenyan counties.
+
+If these optional columns are missing, the app will still run but **maps and trend plots will be disabled**.
+""")
 
 if uploaded:
     df2 = pd.read_csv(uploaded)
@@ -120,6 +138,7 @@ if uploaded:
 
     df2['clean_location'] = df2['user_location'].astype(str).str.lower()
 
+    # Reduced for clarity; more mappings in the colab notebook
     county_keywords = {
         'nairobi': 'Nairobi',
         'kisumu': 'Kisumu',
@@ -188,6 +207,7 @@ if uploaded:
         fig_map = px.choropleth(
             df_map,
             height=600,
+            width=800,
             geojson=kenya_geo,
             locations="county",
             featureidkey="properties.COUNTY",
