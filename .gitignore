@@ -45,7 +45,6 @@ saved_models/
 
 # Data files (optional)
 data/
-*.csv
 *.tsv
 *.xlsx
 *.json
