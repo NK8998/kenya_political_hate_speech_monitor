@@ -1,0 +1,61 @@
+# ------------------------------
+# Python
+# ------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.pickle
+*.joblib
+
+# Virtual environments
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+
+# Jupyter / Colab
+.ipynb_checkpoints/
+*.ipynb
+
+# Streamlit
+.streamlit/
+
+# Cache & temp
+*.cache
+.cache/
+*.log
+*.tmp
+tmp/
+temp/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Model artifacts (optional but recommended)
+models/
+saved_models/
+*.h5
+*.pt
+*.pth
+*.model
+
+# Data files (optional)
+data/
+*.csv
+*.tsv
+*.xlsx
+*.json
+
+# GeoJSON (optional; include ONLY if not needed in repo)
+#*.geojson
+
+# Node stuff (if any UI assets)
+node_modules/
+
+# VSCode
+.vscode/
+.code-workspace
