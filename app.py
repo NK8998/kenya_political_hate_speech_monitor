@@ -9,9 +9,9 @@ from imblearn.over_sampling import RandomOverSampler
 import matplotlib.pyplot as plt
 import plotly.express as px
 
-st.set_page_config(page_title="Kenya Political Hate Speech Detector", layout="wide")
+st.set_page_config(page_title="Artificial Intelligence-Driven Sentiment Analysis for Detecting Political Instability in Kenya", layout="wide")
 
-st.title("🇰🇪 Kenya Political Hate-Speech Detection Dashboard")
+st.title("🇰🇪 Kenya Political Sentiment Analysis Monitor Dashboard")
 st.write("""
 This tool analyzes political tweets, predicts hate-speech likelihood, and visualizes 
 trends over time and across regions in Kenya.
